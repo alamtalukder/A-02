@@ -72,6 +72,12 @@ header, section{
     width: 135px;
     height: 44px;
 }
+.btn:hover{
+    opacity: 0.8;
+    background-color: bisque;
+    transition: 0.3s;
+}
+   
 .menu-toggle{
     display: none;
     color: white; 
@@ -127,7 +133,7 @@ header, section{
     border: none;
     color: #FFFFFF;
     gap: 10px; 
-}  
+} 
 .banner-btn2{
     border-radius: 25px;
     padding: 10px 22px 10px 22px;
@@ -184,6 +190,48 @@ header, section{
     color: #00FF88; 
 }
 /* choose area section styles */
+.choose h1{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.grid-container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "audio mobile mobile"
+    "audio global global"
+    "interview interview resources";
+}
+.card1 {
+  background-color: #240b4f; /* Lighter purple card */
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card1 h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.card1 p {
+  color: #a19bb8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Assigning each div to its specific area */
+.audio { grid-area: audio; }
+.mobile { grid-area: mobile; }
+.global { grid-area: global; }
+.interviews { grid-area: interview; }
+.resources { grid-area: resources; }
 
 
 
@@ -259,8 +307,10 @@ header, section{
 }
 
 
-
 /* Meet the Host section styles */
+.host-section{
+   padding-bottom: 120px;
+}
 .host-section h1{
     color: #FFFFFF;
     font-weight: 500;
@@ -312,6 +362,39 @@ header, section{
     color: #00FF88; 
     font-weight: 400;
     margin-left: 20px; 
+}
+footer{
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto; 
+}
+.footer-container{
+    text-align: center;
+    justify-content: center;
+    padding: 120px; 
+}
+.footer-container h1{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 48px;
+    text-align: center;
+}
+.footer-container a{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 48px;
+    text-align: center;
+}
+.footer-container p{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    text-align: center;
 }
 
 /* footer section styles */
@@ -406,6 +489,14 @@ header, section{
     border: none;
     border-radius: 0 0 22px 22px;
    }
+   /* grid style */
+   .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: none; 
+  }
+  .card {
+    grid-area: auto; 
+  }
    
    /* meet the host section responsive-mobile device */
    .host-container{
@@ -421,8 +512,5 @@ header, section{
     text-align: center;
    }
    /* footer section responsive-mobile device */
-   .footer{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-   }
+  
 }
