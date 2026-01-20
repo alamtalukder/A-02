@@ -400,10 +400,6 @@ header, section{
     justify-content: center;
     gap: 5px;
    }
-   
-   
-  
-   
    .episode-info{
     background-color: #250D44; 
     padding-bottom: 24px;
@@ -411,11 +407,18 @@ header, section{
     border-radius: 0 0 22px 22px;
    }
    
-   .
    /* meet the host section responsive-mobile device */
-   .host{
+   .host-container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+   }
+   .host-container img{
+    position: relative;
+    top: 10%;
+    left: 32%;
+   }
+   .host-info{
+    text-align: center;
    }
    /* footer section responsive-mobile device */
    .footer{
